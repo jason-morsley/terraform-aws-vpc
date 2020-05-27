@@ -1,1 +1,21 @@
-terraform-aws-vpc
+﻿# Terraform a VPC in AWS
+
+## Examples
+
+For examples how to use, please refer to the examples folder.
+
+## Usage
+
+```
+module "vpc" {
+
+  source = "jason-morsley/aws-vpc"
+
+  name = "example"
+
+  tags = {
+    Terraform = "true"
+  }
+
+}
+```
