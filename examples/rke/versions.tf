@@ -5,12 +5,14 @@
 #        \  /  __/ |  \__ \ | (_) | | | \__ \
 #         \/ \___|_|  |___/_|\___/|_| |_|___/
 
-
 terraform {
+
   required_providers {
     aws = {
       source = "hashicorp/aws"
     }
   }
+
   required_version = ">= 0.13"
+
 }

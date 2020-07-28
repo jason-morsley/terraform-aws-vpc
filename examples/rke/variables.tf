@@ -5,19 +5,29 @@
 #        \  / (_| | |  | | (_| | |_) | |  __/\__ \
 #         \/ \__,_|_|  |_|\__,_|_.__/|_|\___||___/
 
-variable "access_key" {
-  type = string
-}
-variable "secret_key" {
+# VPC
+
+variable "name" {
   type = string
 }
 
-variable "region" {
+variable "vpc_cidr" {
   type = string
-  default = "eu-west-2" # London
 }
+
+variable "public_subnet_cidrs" {
+  type    = list(string)
+  default = []
+}
+
+variable "private_subnet_cidrs" {
+  type    = list(string)
+  default = []
+}
+
+# Cluster
 
 variable "cluster_name" {
-  type = string
+  type    = string
   default = "rke-example"
 }

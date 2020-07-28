@@ -5,12 +5,10 @@
 #     | |___| (_) | (_| (_| | \__ \
 #     |______\___/ \___\__,_|_|___/
 
-# https://www.terraform.io/docs/configuration/locals.html
-
 locals {
-  
+
   merged_vpc_tags = merge(
-    { Name = "${var.name}-vpc" },
+  { Name = "${var.name}-vpc" },
     var.tags,
     var.vpc_tags,
   )
@@ -25,8 +23,6 @@ locals {
     var.private_subnet_tags
   )
 
-  internet_cidr = "10.0.0.0/0"
-  
-}
+  internet_cidr = "0.0.0.0/0"
 
-# A value expression, with merged maps and an internet CIRD.
+}
